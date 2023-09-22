@@ -1,0 +1,154 @@
+    .offer {
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            & .easy {
+                &::before {
+                    width: 741px;
+                    height: 450px;
+                    background-image: url('../images/icons/easy-background.svg');
+                    right: -207px;
+                    top: -60px;
+                }
+            }
+            & .coming {
+                flex-direction: row-reverse;
+                &::before {
+                    background-image: url('../images/icons/coming.svg');
+                    left: -207px;
+                    top: -60px;
+                }
+            }
+            & .zero {
+                &::before {
+                    background-image: url('../images/icons/zero.svg');
+                    right: -207px;
+                    top: -60px;
+                }
+            }
+        }
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-bottom: 292px;
+            &::before {
+                content: '';
+                width: 610px;
+                height: 445px;
+                position: absolute;
+            }
+        }
+        &__title {
+            max-width: 445px;
+            margin: 0;
+            margin-bottom: 24px;
+            font-family: $fontHeading;
+            font-size: 48px;
+            line-height: 48px;
+            font-weight: 700;
+            letter-spacing: -2.14 px;
+            color: $dark-navy;
+        }
+        &__text {
+            max-width: 445px;
+            margin: 0;
+            margin-bottom: 40px;
+            margin-bottom: $fontBody;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: $text-color;
+        }
+        &__btn {
+            display: inline-block;
+            padding: 11px 39px;
+            border: 3px solid #fcb72b;
+            white-space: nowrap;
+            text-decoration: none;
+            background: #fcb72b;
+            @include main-font;
+            font-weight: 700;
+            color: #ffffff;
+            transition: all 0.3s ease-in-out;
+            align-self: flex-start;
+            &:hover {
+                background-color: $main-color;
+                color: $button-color;
+            }
+            &:active {
+                transform: scale(0.96)
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 375px) {
+        .container {
+            max-width: 375px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+    
+    @media only screen and (max-width: 576px) {
+        body {
+            text-align: center;
+        }
+        .offer {
+            .offer__item {
+                margin-bottom: 120px;
+                justify-content: center;
+            }
+            .offer__item::before {
+                position: unset;
+                height: 311px;
+                margin-bottom: 56px;
+                background-repeat: no-repeat;
+            }
+            &__list {
+                .easy::before {
+                    background-image: none;
+                    background: url('../images/easy-mobile-parttern.png') 16px bottom no-repeat, url('../images/easy-mobile-bg.png') center no-repeat;
+                }
+                .coming::before {
+                    background: url('../images/easy-mobile-parttern_r.png') 16px bottom no-repeat, url('../images/coming-mobile-bg.png') center no-repeat;
+                }
+                .zero::before {
+                    background: url('../images/easy-mobile-parttern.png') 16px bottom no-repeat, url('../images/zero-mobile-bg.png') center no-repeat;
+                }
+            }
+            .offer__title {
+                margin-bottom: 32px;
+                font-size: 32px;
+                line-height: 32px;
+                letter-spacing: -1.42857px;
+            }
+            .offer__text {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 989px) {
+        .container {
+            padding-left: 39px;
+            padding-right: 40px;
+        }
+        .offer {
+            text-align: center;
+        }
+        .offer__item {
+            justify-content: center;
+        }
+        .offer__item:not(:last-child) {
+            margin-bottom: 128px;
+        }
+        .offer__item:last-child {
+            margin-bottom: 104px;
+        }
+        .offer__item::before {
+            margin-bottom: 56px;
+            position: unset;
+        }
+    }

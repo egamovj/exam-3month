@@ -1,0 +1,208 @@
+                .sign-in {
+                    padding: 102px 0;
+                    background: $dark-navy;
+                    background-image: url('../../images/icons/sign-in-bg.svg');
+                    background-repeat: no-repeat;
+                    background-position: bottom right;
+                    &__container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    &__right {
+                        display: flex;
+                        column-gap: 18px;
+                        &-appstore,
+                        &-playmarket {
+                            display: flex;
+                            padding: 9px 15px;
+                            background-color: $main-color;
+                            border-radius: 4px;
+                            column-gap: 12px;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                            &:hover {
+                                background-color: $button-color;
+                            }
+                            &:active {
+                                transform: scale(0.96);
+                            }
+                        }
+                        & span {
+                            font-family: $fontHeading;
+                            font-size: 10px;
+                            line-height: 14.81px;
+                            letter-spacing: 0.45px;
+                            font-weight: 700;
+                            color: $dark-navy;
+                        }
+                        & h3 {
+                            font-family: $fontHeading;
+                            font-size: 20px;
+                            line-height: 24px;
+                            font-weight: 700;
+                            letter-spacing: -0.89px;
+                            color: $dark-navy;
+                        }
+                    }
+                    &__title {
+                        font-family: $fontHeading;
+                        font-size: 48px;
+                        font-weight: 700;
+                        line-height: 48px;
+                        letter-spacing: -2.142857074737549px;
+                        text-align: left;
+                        max-width: 415px;
+                        color: $main-color;
+                    }
+                }
+                
+                .site-footer {
+                    position: sticky;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background: #333a44;
+                    padding-top: 35px;
+                    padding-bottom: 32px;
+                    &__container {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                    &__list {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        list-style-type: none;
+                    }
+                    &__item:not(:last-child) {
+                        margin-right: 32px;
+                    }
+                    &__link {
+                        text-decoration: none;
+                        font-family: 'Space Mono', 'Arial', sans-serif;
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 25px;
+                        color: #939caa;
+                        transition: all 0.3s ease-in-out;
+                        margin-left: 58.58px;
+                        &:hover {
+                            color: $button-color;
+                        }
+                    }
+                    &__social {
+                        &--list {
+                            padding: 0;
+                            margin: 0;
+                            margin-left: auto;
+                            list-style-type: none;
+                            display: flex;
+                            align-items: center;
+                        }
+                        &--item:not(:last-child) {
+                            margin-right: 24px;
+                        }
+                    }
+                }
+                
+                .social-network {
+                    display: block;
+                    transition: all 0.3s ease-in-out;
+                    &:hover path {
+                        fill: $main-color;
+                    }
+                }
+                
+                @media (max-width: 576px) {
+                    body {
+                        text-align: center;
+                    }
+                    .sign-in {
+                        flex-direction: column;
+                        display: flex;
+                        padding: 88px 0;
+                    }
+                    .sign-in__container {
+                        text-align: center;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    .sign-in__title {
+                        text-align: center;
+                        margin-bottom: 40px;
+                        font-size: 32px;
+                        line-height: 32px;
+                        letter-spacing: -1.42857px;
+                    }
+                    .sign-in__list {
+                        margin: 0;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                    .sign-in__link {
+                        height: 40px;
+                    }
+                    .site-footer {
+                        &__container {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        &__list {
+                            display: flex;
+                            margin: 0;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        &__item:not(:last-child) {
+                            margin-right: 0px;
+                        }
+                    }
+                    @include for-tablet() {
+                        .container {
+                            padding-left: 39px;
+                            padding-right: 40px;
+                        }
+                        .sign-in {
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                        .sign-in__container {
+                            justify-content: center;
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                        .sign-in__title {
+                            text-align: center;
+                            margin-bottom: 40px;
+                            font-size: 32px;
+                            line-height: 32px;
+                            letter-spacing: -1.42857px;
+                        }
+                        .sign-in__list {
+                            margin: 0;
+                            margin-top: 40px;
+                        }
+                        .site-footer {
+                            &__container {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            &__list {
+                                display: flex;
+                                margin: 0;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            &__item:not(:last-child) {
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+                }

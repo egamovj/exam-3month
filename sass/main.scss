@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1146px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import './fonts';
+@import './variables';
+@import './mixins';
+@import './all-blocks/header';
+@import './all-blocks/hero';
+@import './all-blocks/delivery';
+@import './all-blocks/offer';
+@import './all-blocks/footer';

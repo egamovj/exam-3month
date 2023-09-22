@@ -1,0 +1,35 @@
+@mixin center-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin main-font {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+@mixin for-mobile() {
+    @media (min-width: $for-mobile) {
+        @content;
+    }
+}
+
+@mixin for-tablet() {
+    @media (min-width: $for-tablet) {
+        @content;
+    }
+}
+
+@mixin for-large-tablet() {
+    @media screen and (min-width: $for-large-tablet) {
+        @content;
+    }
+}
+
+@mixin for-desktop() {
+    @media screen and (min-width: $for-desktop) {
+        @content;
+    }
+}
